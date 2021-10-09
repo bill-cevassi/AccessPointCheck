@@ -13,7 +13,6 @@ for ($i = 0; $i -lt $size; $i++) {
     if ($Result.Status.ToString() -EQ 'TimedOut'){
         $ApsOFF = ($imp.GetValue($i) | Select-Object -Property IP,APNAME)
         $ApsOFF | Export-Csv -Path $outFileName -NoTypeInformation -Append
-        $imp.GetValue($i).IP | Out-File -FilePath .\Aps-off.txt -Append
   
     }
 }
