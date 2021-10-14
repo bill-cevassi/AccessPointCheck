@@ -1,9 +1,9 @@
 param(
-    [Parameter(Mandatory=$false,ParameterSetName="c",ValueFromPipeline=$false)][string[]]$Contadorping,
-    [Parameter(Mandatory=$true,ParameterSetName="o",ValueFromPipeline=$false)][string[]]$ArquivoOrigem,
-    [Parameter(Mandatory=$true,ParameterSetName="i",ValueFromPipeline=$false)][string[]]$ColunaIP,
-    [Parameter(Mandatory=$true,ParameterSetName="d",ValueFromPipeline=$false)][string[]]$ColunaDescricao,
-    [Parameter(Mandatory=$false,ParameterSetName="t",ValueFromPipeline=$false)][string[]]$Delimitador = ','
+    [Parameter(ParameterSetName="ContadorPing")][string[]]$ContadorPing,
+    [Parameter(Mandatory,ParameterSetName="ArquivoOrigem")][string[]]$ArquivoOrigem,
+    [Parameter(Mandatory,ParameterSetName="ColunaIP")][string[]]$ColunaIP,
+    [Parameter(ParameterSetName="ColunaDescricao")][string[]]$ColunaDescricao,
+    [Parameter(ParameterSetName="Delimitador")][string[]]$Delimitador
     
 )
 
